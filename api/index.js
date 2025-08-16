@@ -14,6 +14,9 @@ const walletRoutes = require("./routes/walletRoutes");
 const Ticket = require("./models/Ticket");
 
 const app = express();
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = "bsbsfbrnsftentwnnwnwn";
