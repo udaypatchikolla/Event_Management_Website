@@ -1,0 +1,16 @@
+{
+  "name": "eventoems",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "api"
+  ],
+  "scripts": {
+    "dev:api": "cd api && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "dev": "powershell -Command \"Start-Process cmd -ArgumentList '/c cd api && npm run dev' -WindowStyle Hidden; Start-Process cmd -ArgumentList '/c cd client && npm run dev' -WindowStyle Hidden\""
+  }
+}
+
+
